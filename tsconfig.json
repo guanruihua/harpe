@@ -11,11 +11,13 @@
     "alwaysStrict": true,
     "moduleResolution": "node",
     "baseUrl": "./src",
+    "jsx": "react",
     "allowSyntheticDefaultImports": true, 
     "esModuleInterop": true,  
   },
   "include": [
-    "./src/**/*"
+    "./src/**/*",
+    "./src/**/*.tsx"
   ],
   "exclude": [
     "./src/test",
