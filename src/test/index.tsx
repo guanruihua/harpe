@@ -1,6 +1,6 @@
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
-import { useToggle } from '../hook'
+import { useBoolean } from '../hook'
 import './index.less'
 import { TestIndexDB } from './indexDB'
 import { testLocation } from './location'
@@ -8,7 +8,7 @@ import { testLocation } from './location'
 // Usage
 function App2() {
 	// Call the hook which returns, current value and the toggler function
-	const [isTextChanged, setIsTextChanged] = useToggle();
+	const [isTextChanged, setIsTextChanged] = useBoolean();
 
 	return (
 		<button onClick={setIsTextChanged}>{isTextChanged ? 'Toggled' : 'Click to Toggle'}</button>
@@ -23,7 +23,7 @@ function App(Props: any) {
 	return <div>
 		React App
 		<App2 />
-		<TestIndexDB />
+		{/* <TestIndexDB /> */}
 	</div>
 }
 
