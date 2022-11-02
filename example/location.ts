@@ -1,5 +1,5 @@
-import { RH } from '../index';
+// import { RH } from '../index';
 
-export function testLocation() {
-	RH.testLocation()
-}
+// export function testLocation() {
+// 	RH.testLocation()
+// }

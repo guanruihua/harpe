@@ -1,3 +1,3 @@
-import { RH } from '../index'
+// import { RH } from '../index'
 
-console.log(RH.testLocation())
+// console.log(RH.testLocation())
