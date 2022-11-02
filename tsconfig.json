@@ -20,6 +20,8 @@
     "./src/**/*.tsx"
   ],
   "exclude": [
+    "./config",
+    "./example",
     "./src/test",
     "*.spec.ts"
   ]

@@ -1,14 +1,14 @@
 // 待完成
 
 export const cookie = {
-	set: function (name:string, value:string, time:string) {
+	set: function (name: string, value: string, time: string) {
 		document.cookie = name + '=' + value + '; max-age=' + time;
 		return this;
 	},
-	remove: function (name:string) {
+	remove: function (name: string) {
 		// return this.setCookie(name, '', -1);
 	},
-	get: function (name:string) {
+	get: function (name: string) {
 		const allCookieArr = document.cookie.split('; ');
 		for (let i = 0; i < allCookieArr.length; i++) {
 			let itemCookieArr = allCookieArr[i].split('=');
@@ -22,17 +22,17 @@ export const cookie = {
 
 // 获取指定Cookie值
 export const getCookie = (k) => {
-  const res = RegExp('(^|; )' + encodeURIComponent(k) + '=([^;]*)').exec(document.cookie)
-  return res && res[2]
+	const res = RegExp('(^|; )' + encodeURIComponent(k) + '=([^;]*)').exec(document.cookie)
+	return res && res[2]
 }
 
 // 设置Cookie值
-export function setCookie(name, value, expriesDays, encode = false) {
-  var Days = expriesDays || 10
-  var exp = new Date()
-  exp.setTime(exp.getTime() + Days * 24 * 60 * 60 * 1000)
-  const val = encode ? escape(value) : value
-  document.cookie = name + '=' + val + ';domain=zhuanzhuan.com;path=/;expires=' + exp.toUTCString()
+export function setCookie(name, value, expiryDays, encode = false) {
+	var Days = expiryDays || 10
+	var exp = new Date()
+	exp.setTime(exp.getTime() + Days * 24 * 60 * 60 * 1000)
+	const val = encode ? escape(value) : value
+	document.cookie = name + '=' + val + ';domain=ruihuag.com;path=/;expires=' + exp.toUTCString()
 }
 
 // 简易版 Storage 操作，sessionStorage 及 localStorage 类似

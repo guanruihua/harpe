@@ -1,28 +1,35 @@
 {
-  "name": "rh-brower-methods",
+  "name": "rh-browser",
   "version": "0.0.7",
   "description": "方法包",
   "main": "dist/index.js",
   "scripts": {
+    "prepare": "husky install",
+    "commitlint": "commitlint -e",
     "build": "tsc",
     "dev": "ts-node-dev --respawn --transpile-only ./src/index.ts",
-    "brower": "webpack serve --config ./webpack.dev.js",
+    "browser": "webpack serve --config ./webpack.dev.js",
     "dev_test": "ts-node-dev --respawn --transpile-only ./src/test/test_rh.ts",
     "restart": "rimraf dist && npm run build && npm start",
     "start": "node ./dist/index.js",
     "prod": "npm run build && npm run start",
     "pub": "npm publish"
   },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS"
+    }
+  },
   "keywords": [
     "typescript"
   ],
   "author": "ruihuag",
   "license": "ISC",
-  "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.11.1",
     "@babel/preset-env": "^7.15.0",
     "@babel/preset-react": "^7.10.4",
+    "@commitlint/config-conventional": "^17.2.0",
     "@types/node": "^16.11.6",
     "@types/react": "^17.0.15",
     "@types/react-custom-scrollbars": "^4.0.8",
@@ -30,10 +37,12 @@
     "babel-core": "^6.26.3",
     "babel-loader": "^8.1.0",
     "clean-webpack-plugin": "^4.0.0-alpha.0",
+    "commitlint": "^17.2.0",
     "copy-webpack-plugin": "^9.0.1",
     "cross-env": "^7.0.3",
     "css-loader": "^5.0.1",
     "html-webpack-plugin": "^5.5.0",
+    "husky": "^8.0.1",
     "less": "^4.0.0",
     "less-loader": "^8.0.0",
     "mini-css-extract-plugin": "^1.6.1",

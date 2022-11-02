@@ -1,2 +1,3 @@
-# rh-brower-methods
-> 本仓库主要是学习使用
+# rh-browser
+
+> 浏览器方法封装

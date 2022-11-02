@@ -6,9 +6,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const ProgressBarWebpackPlugin = require('progress-bar-webpack-plugin')
 
 module.exports = {
-
 	entry: {
-		app: './src/test/index.tsx',
+		app: '../example/index.tsx',
 	},
 	output: {
 		publicPath: '/',
@@ -78,7 +77,7 @@ module.exports = {
 	},
 	mode: 'development',
 	devServer: {
-		port: 3457,
+		port: 6457,
 		host: 'localhost',
 		watchContentBase: true,
 		inline: true,
@@ -89,7 +88,7 @@ module.exports = {
 		compress: true,
 		clientLogLevel: 'warning',
 		headers: { 'Access-Control-Allow-Origin': '*' },
-		// open: true,
+		open: false,
 		watchOptions: {
 			ignored: /node_modules/,
 		},
