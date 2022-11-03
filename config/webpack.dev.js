@@ -26,7 +26,7 @@ const plugins = [
 ].filter(Boolean)
 
 const rules = [
-	{ test: /\.(js|jsx)$/, loader: 'babel-loader', exclude: /node_modules/ },
+	{ test: /\.(js)$/, loader: 'babel-loader', exclude: /node_modules/ },
 	{
 		test: /\.less$/,
 		exclude: /node_modules/,

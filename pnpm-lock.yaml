@@ -27,6 +27,8 @@ specifiers:
   react: ^17.0.2
   react-dom: ^17.0.2
   resolve-url-loader: ^4.0.0
+  rh-js-methods: ^2.1.12
+  rh-test: 0.1.26
   rimraf: ^3.0.2
   style-loader: ^2.0.0
   ts-loader: ^8.0.2
@@ -65,6 +67,8 @@ devDependencies:
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
   resolve-url-loader: 4.0.0
+  rh-js-methods: 2.1.12
+  rh-test: 0.1.26
   rimraf: 3.0.2
   style-loader: 2.0.0_webpack@5.74.0
   ts-loader: 8.4.0_qqxisngxjbp7lstdk7boexbu3e
@@ -6016,6 +6020,22 @@ packages:
   /reusify/1.0.4:
     resolution: {integrity: sha512-U9nH88a3fc/ekCF1l0/UP1IosiuIjyTh7hBvXVMHYgVcfGvt897Xguj2UOLDeI5BG2m7/uwyaLVT6fbtCwTyzw==}
     engines: {iojs: '>=1.0.0', node: '>=0.10.0'}
+    dev: true
+
+  /rh-js-methods/2.1.12:
+    resolution: {integrity: sha512-lu9o77OqBfLAs3gCSrG7usZngYeWavBhBg7xtV2QPeYMj9pNrY5hcOlTtRibd9VQ/CgDJ3zf1Ukf1f0+WLQWsw==}
+    engines: {node: '>=16'}
+    dependencies:
+      rh-ts-methods: 0.0.2
+    dev: true
+
+  /rh-test/0.1.26:
+    resolution: {integrity: sha512-utVADTSXSzaX78FeJzdd8wI2/JZ/KbTlF1WkGxm3ijx7c12vXi6Itt2V4xmppC+SAeGRpxZBSlN9POP5nVHkHw==}
+    engines: {node: '>=16'}
+    dev: true
+
+  /rh-ts-methods/0.0.2:
+    resolution: {integrity: sha512-6UL1x2zlTTsDtl/4TIwDzpaucySm9gHBy0HQFPKL29NTRRbikTMxRFf+/iXNTXUUZSAgpwLERD5ISV1wtAGErw==}
     dev: true
 
   /rimraf/2.7.1:
