@@ -15,7 +15,7 @@ specifiers:
   commitlint: ^17.2.0
   copy-webpack-plugin: ^9.0.1
   cross-env: ^7.0.3
-  css-loader: ^5.0.1
+  css-loader: ^5.2.7
   esbuild-loader: ^2.20.0
   html-webpack-plugin: ^5.5.0
   husky: ^8.0.1
@@ -23,6 +23,8 @@ specifiers:
   less-loader: ^8.0.0
   mini-css-extract-plugin: ^1.6.1
   node-notifier: ^8.0.2
+  postcss: ^8.4.18
+  postcss-loader: ^7.0.1
   progress-bar-webpack-plugin: ^2.1.0
   react: ^17.0.2
   react-dom: ^17.0.2
@@ -63,6 +65,8 @@ devDependencies:
   less-loader: 8.1.1_less@4.1.3+webpack@5.74.0
   mini-css-extract-plugin: 1.6.2_webpack@5.74.0
   node-notifier: 8.0.2
+  postcss: 8.4.18
+  postcss-loader: 7.0.1_igyeriywjd4lwzfk4socqbj2qi
   progress-bar-webpack-plugin: 2.1.0_webpack@5.74.0
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
@@ -5523,6 +5527,20 @@ packages:
       lilconfig: 2.0.6
       postcss: 8.4.18
       yaml: 1.10.2
+    dev: true
+
+  /postcss-loader/7.0.1_igyeriywjd4lwzfk4socqbj2qi:
+    resolution: {integrity: sha512-VRviFEyYlLjctSM93gAZtcJJ/iSkPZ79zWbN/1fSH+NisBByEiVLqpdVDrPLVSi8DX0oJo12kL/GppTBdKVXiQ==}
+    engines: {node: '>= 14.15.0'}
+    peerDependencies:
+      postcss: ^7.0.0 || ^8.0.1
+      webpack: ^5.0.0
+    dependencies:
+      cosmiconfig: 7.0.1
+      klona: 2.0.5
+      postcss: 8.4.18
+      semver: 7.3.8
+      webpack: 5.74.0_webpack-cli@4.10.0
     dev: true
 
   /postcss-modules-extract-imports/3.0.0_postcss@8.4.18:

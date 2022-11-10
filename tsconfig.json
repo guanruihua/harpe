@@ -14,6 +14,7 @@
     "jsx": "react",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
+    "declaration": true,
     "paths": {
       "@/*": [
         "src/*"
@@ -21,12 +22,13 @@
     },
   },
   "include": [
+    "./example**/*",
+    "./typings/*.d.ts",
     "./src/**/*",
     "./src/**/*.tsx"
   ],
   "exclude": [
     "./config",
-    "./example**/*",
     "./src/test",
     "*.spec.ts"
   ]

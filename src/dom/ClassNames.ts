@@ -1,16 +1,12 @@
 import { type } from 'rh-js-methods'
-type FalseValue = null | undefined | 0
 
-type _ClassNameUnit = Record<string, boolean | FalseValue> | string | undefined | null | number | boolean
+type ClassNameBaseUnit = Record<string, any> | string | undefined | null | number | boolean
 
-export type ClassNameUnit = _ClassNameUnit | _ClassNameUnit[]
+export type ClassNameUnit = ClassNameBaseUnit | ClassNameBaseUnit[]
 
 export function classNames(...rest: ClassNameUnit[]): string {
 
-	// 结果数组
 	const resultSet = new Set<string | number>()
-
-	// 结果取舍
 	const choicesMap: Record<string, boolean> = {}
 
 	function checkValid(itemFlag: boolean, key: string) {
@@ -35,7 +31,7 @@ export function classNames(...rest: ClassNameUnit[]): string {
 			}
 
 			if (type(item) === 'Object') {
-				for (let key in item as Record<string, any>) {
+				for (const key in item as Record<string, any>) {
 					const itemFlag = !!item[key]
 					choicesMap[key] = itemFlag
 					checkValid(itemFlag, key)
@@ -48,7 +44,7 @@ export function classNames(...rest: ClassNameUnit[]): string {
 	forEachData(rest)
 
 
-	for (let key in choicesMap as Record<string, any>) {
+	for (const key in choicesMap as Record<string, any>) {
 		checkValid(choicesMap[key], key)
 	}
 

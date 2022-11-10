@@ -1,7 +1,7 @@
 import { test } from 'rh-test';
 import { classNames } from '../lib';
 
-test<any, any>('classNames', classNames,
+test<any[], string>('classNames', classNames,
 	{ params: [], tobe: '' },
 	{ params: ['foo'], tobe: 'foo' },
 	{ params: ['foo', 1], tobe: 'foo 1' },

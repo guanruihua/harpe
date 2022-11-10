@@ -28,8 +28,41 @@ const plugins = [
 const rules = [
 	{ test: /\.(js)$/, loader: 'babel-loader', exclude: /node_modules/ },
 	{
-		test: /\.less$/,
+		test: /\.css$/i,
 		exclude: /node_modules/,
+		use: [MiniCssExtractPlugin.loader, 'style-loader', 'css-loader'],
+	},
+	{
+		test: /\.module.less$/,
+		exclude: /node_modules/,
+		use: [
+			'style-loader',
+			{
+				loader: 'css-loader',
+				options: {
+					modules: {
+						localIdentName: '_[local]_[hash:base64:6]',
+					},
+					importLoaders: 2,
+				},
+			},
+			{
+				loader: 'postcss-loader',
+			},
+			{
+				loader: 'less-loader',
+				options: {
+					lessOptions: {
+						importLoaders: 2,
+						javascriptEnabled: true,
+					},
+				},
+			},
+		],
+	},
+	{
+		test: /\.less$/,
+		exclude: /\.module.less/,
 		use: [
 			'style-loader',
 			'css-loader',
@@ -42,11 +75,7 @@ const rules = [
 				},
 			}]
 	},
-	{
-		test: /\.css$/i,
-		exclude: /node_modules/,
-		use: [MiniCssExtractPlugin.loader, 'style-loader', 'css-loader'],
-	},
+
 	{
 		test: /\.(jpe?g|png|gif|svg|woff|woff2|eot|ttf|otf|ico)$/i,
 		type: "asset/resource",
@@ -88,45 +117,6 @@ module.exports = {
 	plugins,
 	module: {
 		rules
-		// rules: [
-		// 	{ test: /\.(js|jsx)$/, loader: 'babel-loader', exclude: /node_modules/ },
-		// 	{ test: /\.(ts|tsx)$/, loader: 'ts-loader', exclude: /node_modules/ },
-		// 	// {
-		// 	// 	test: /\.[jt]sx?$/,
-		// 	// 	exclude: /node_modules/,
-		// 	// 	loader: 'esbuild-loader',
-		// 	// 	options: {
-		// 	// 		target: 'esnext',
-		// 	// 		jsxFactory: 'React.createElement',
-		// 	// 		jsxFragment: 'React.Fragment',
-		// 	// 	},
-		// 	// },
-		// 	{
-		// 		test: /\.less$/,
-		// 		exclude: /node_modules/,
-		// 		use: [
-		// 			'style-loader',
-		// 			'css-loader',
-		// 			{
-		// 				loader: 'less-loader', // compiles Less to CSS
-		// 				options: {
-		// 					lessOptions: { // 如果使用less-loader@5，请移除 lessOptions 这一级直接配置选项。
-		// 						javascriptEnabled: true,
-		// 					},
-		// 				},
-		// 			}]
-		// 	},
-		// 	{
-		// 		test: /\.css$/i,
-		// 		exclude: /node_modules/,
-		// 		use: [MiniCssExtractPlugin.loader, 'style-loader', 'css-loader'],
-		// 	},
-		// 	{
-		// 		test: /\.(jpe?g|png|gif|svg|woff|woff2|eot|ttf|otf|ico)$/,
-		// 		type: "asset/resource",
-		// 		exclude: /node_modules/
-		// 	},
-		// ]
 	},
 	cache: {
 		type: 'filesystem',
