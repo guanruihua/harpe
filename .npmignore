@@ -1,8 +1,12 @@
-lib/
 test/
 src/
 push.bat
-README.md
+*.md
 .gitignore
 jest.config.ts
 tsconfig.json
+.eslint*
+.prettier*
+rollup.config.*
+md.ts
+coverage/

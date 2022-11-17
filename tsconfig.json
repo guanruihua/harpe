@@ -1,35 +1,30 @@
 {
   "compilerOptions": {
-    "target": "es6",
-    "module": "esnext",
+    "outDir": "/lib",
+    "target": "ESNext",
+    "lib": [
+      "DOM",
+      "ESNext"
+    ],
+    "emitDecoratorMetadata": true,
+    "declaration": true,
+    "declarationMap": true,
     "sourceMap": true,
-    "outDir": "./dist",
-    "removeComments": true,
-    "strict": true,
     "noImplicitAny": false,
     "strictNullChecks": true,
     "alwaysStrict": false,
     "moduleResolution": "node",
+    "experimentalDecorators":true,
     "baseUrl": "./src",
-    "jsx": "react",
+    "jsx": "react-jsx",
     "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
-    "declaration": true,
-    "paths": {
-      "@/*": [
-        "src/*"
-      ]
-    },
+    "esModuleInterop": true
   },
-  "include": [
-    "./example**/*",
-    "./typings/*.d.ts",
-    "./src/**/*",
-    "./src/**/*.tsx"
-  ],
+  "include": ["./src/**/*", "*.d.ts"],
   "exclude": [
-    "./config",
-    "./src/test",
-    "*.spec.ts"
+    "./config/**/*",
+    "**/*/__test__/*",
+    "**/*/md.ts",
+    "**/*/*.md",
   ]
 }

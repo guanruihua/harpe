@@ -1,3 +1,4 @@
+/* eslint-disable*/
 // 获取url的参数
 export function getWindonHref(): any {
 	let sHref: string = window.location.href;

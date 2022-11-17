@@ -1,3 +1,4 @@
+/* eslint-disable*/
 // 待完成
 export const cookie = {
 	set: function (name: string, value: string, time: string) {
@@ -5,12 +6,13 @@ export const cookie = {
 		return this;
 	},
 	remove: function (name: string) {
+		console.log(name)
 		// return this.setCookie(name, '', -1);
 	},
 	get: function (name: string) {
 		const allCookieArr = document.cookie.split('; ');
 		for (let i = 0; i < allCookieArr.length; i++) {
-			let itemCookieArr = allCookieArr[i].split('=');
+			const itemCookieArr = allCookieArr[i].split('=');
 			if (itemCookieArr[0] === name) {
 				return itemCookieArr[1]
 			}
@@ -26,10 +28,10 @@ export const getCookie = (k) => {
 }
 
 // 设置Cookie值
-export function setCookie(name, value, expiryDays, encode = false) {
-	var Days = expiryDays || 10
-	var exp = new Date()
-	exp.setTime(exp.getTime() + Days * 24 * 60 * 60 * 1000)
-	const val = encode ? escape(value) : value
-	document.cookie = name + '=' + val + ';domain=ruihuag.com;path=/;expires=' + exp.toUTCString()
-}
+// export function setCookie(name, value, expiryDays, encode = false) {
+// 	var Days = expiryDays || 10
+// 	var exp = new Date()
+// 	exp.setTime(exp.getTime() + Days * 24 * 60 * 60 * 1000)
+// 	const val = encode ? escape(value) : value
+// 	document.cookie = name + '=' + val + ';domain=ruihuag.com;path=/;expires=' + exp.toUTCString()
+// }

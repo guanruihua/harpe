@@ -1,3 +1,4 @@
+/* eslint-disable*/
 
 // 获取页面滚动距离
 export function getScrollTop() {

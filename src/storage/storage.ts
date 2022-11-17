@@ -1,3 +1,4 @@
+/* eslint-disable*/
 import type { StorageProps, StorageConfig } from './type'
 
 export class StorageClass implements StorageProps {

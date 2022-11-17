@@ -1,3 +1,5 @@
+/* eslint-disable*/
+
 import { type } from 'rh-js-methods'
 
 type ClassNameBaseUnit = Record<string, any> | string | undefined | null | number | boolean

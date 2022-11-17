@@ -1,3 +1,4 @@
+/* eslint-disable*/
 
 // 查询元素是否存在某个class
 export function hasClass(el, className) {

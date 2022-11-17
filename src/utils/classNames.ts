@@ -1,3 +1,5 @@
+/* eslint-disable*/
+
 type _ClassNameUnit = Record<string, boolean> | string | false | undefined | null
 
 export type ClassNameUnit = _ClassNameUnit | _ClassNameUnit[]

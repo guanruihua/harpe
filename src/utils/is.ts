@@ -1,3 +1,4 @@
+/* eslint-disable*/
 
 // 判断是否支持 Intersection
 export function isSupportIntersection() {

@@ -1,3 +1,4 @@
+/* eslint-disable*/
 export interface StorageConfig {
 	prefix?: string
 	before?: () => boolean
