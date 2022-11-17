@@ -4,7 +4,7 @@ export function addCSSVariable(dom: any, key: string, value: any) {
 		console.log(dom.style)
 		dom.style[key] = value
 	}
-	console.log({ dom, key, value })
+	console.log({ dom, key, value }, dom?.style)
 
 	return
 }
