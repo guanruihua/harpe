@@ -30,7 +30,11 @@ const rules = [
 	{
 		test: /\.css$/i,
 		exclude: /node_modules/,
-		use: [MiniCssExtractPlugin.loader, 'style-loader', 'css-loader'],
+		use: [
+			// MiniCssExtractPlugin.loader, 
+			'style-loader',  'css-loader', 
+			// 'postcss-loader'
+		],
 	},
 	{
 		test: /\.module.less$/,
@@ -129,7 +133,7 @@ module.exports = {
 	mode: 'development',
 	devServer: {
 		port: 6457,
-		host: 'localhost',
+		// host: '0.',
 		watchContentBase: true,
 		inline: true,
 		stats: 'errors-only',

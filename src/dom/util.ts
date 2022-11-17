@@ -38,25 +38,25 @@ export function copy(value, callback) {
 }
 
 // 动态加载第三方js
-export function asyncLoadScript(url): Promise<void> {
-  return new Promise(function (resolve, reject) {
-    const tag = document.getElementsByTagName('script')
-    for (const i of tag) {
-      if (i.src === url) {
-        resolve()
-        return
-      }
-    }
-    const script = document.createElement('script')
-    script.type = 'text/javascript'
-    script.src = url
-    script.onerror = reject
-    document.body.appendChild(script)
-    script.onload = () => {
-      resolve()
-    }
-  })
-}
+// export function asyncLoadScript(url): Promise<void> {
+//   return new Promise(function (resolve, reject) {
+//     const tag = document.getElementsByTagName('script')
+//     for (const i of tag) {
+//       if (i.src === url) {
+//         resolve()
+//         return
+//       }
+//     }
+//     const script = document.createElement('script')
+//     script.type = 'text/javascript'
+//     script.src = url
+//     script.onerror = reject
+//     document.body.appendChild(script)
+//     script.onload = () => {
+//       resolve()
+//     }
+//   })
+// }
 
 // 解决 requestAnimationFrame 的兼容问题
 // export function requestAnimationFrame() {

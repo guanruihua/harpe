@@ -7,9 +7,12 @@ import * as ReactDOM from 'react-dom'
 // import { TestCookieCmp } from './cookie'
 // import { TestStorageCmp } from './storage'
 
+import { TesCSStVariable } from '../src/dom/__test__'
+
 function App() {
 	return <div>
 		app
+		<TesCSStVariable />
 		{/* <Test title='Class' /> */}
 		{/* <TestCookieCmp /> */}
 		{/* <TestStorageCmp /> */}

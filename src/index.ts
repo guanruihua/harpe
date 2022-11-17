@@ -2,7 +2,4 @@
 // export * from './utils'
 // export * from './location'
 // export * from './indexDB'
-// export * from './dom'
-export function log(){
-	
-}
+export * from './dom'

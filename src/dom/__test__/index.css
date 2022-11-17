@@ -1,0 +1,4 @@
+.test-css-variable {
+  --color: red;
+  color: var(--color);
+}

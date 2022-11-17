@@ -14,16 +14,20 @@
     "strictNullChecks": true,
     "alwaysStrict": false,
     "moduleResolution": "node",
-    "experimentalDecorators":true,
+    "experimentalDecorators": true,
     "baseUrl": "./src",
     "jsx": "react-jsx",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true
   },
-  "include": ["./src/**/*", "*.d.ts"],
+  "include": [
+    "./src/**/*",
+    "*.d.ts",
+    "./typings/externals.d.ts"
+  ],
   "exclude": [
-    "./config/**/*",
     "**/*/__test__/*",
+    "./config/**/*",
     "**/*/md.ts",
     "**/*/*.md",
   ]
