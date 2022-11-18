@@ -1,3 +1,4 @@
+// 改成放到rh-hook里
 export function addCSSVariable(dom: any, key: string, value: any) {
 
 	if (dom?.style) {
