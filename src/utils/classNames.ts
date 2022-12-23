@@ -1,25 +1,61 @@
 /* eslint-disable*/
 
-type _ClassNameUnit = Record<string, boolean> | string | false | undefined | null
+import { type } from 'abandonjs'
 
-export type ClassNameUnit = _ClassNameUnit | _ClassNameUnit[]
+type ClassNameBaseUnit = Record<string, any> | string | undefined | null | number | boolean
 
-// export function classNames(...rest: (undefined | string | [string, boolean])[]): string {
+export type ClassNameUnit = ClassNameBaseUnit | ClassNameBaseUnit[]
+
+
+/**
+ * @title classNames
+ * @description 生成class
+ * @param ...rest {...ClassNameUnit[]}
+ * @returns string
+ */
 export function classNames(...rest: ClassNameUnit[]): string {
-	
-	const resultArr: unknown[] = rest.map(item => {
-		if (!item) { return }
-		if (typeof item === 'string') {
-			return item
+
+	const resultSet = new Set<string | number>()
+	const choicesMap: Record<string, boolean> = {}
+
+	function checkValid(itemFlag: boolean, key: string) {
+		if (itemFlag === false && resultSet.has(key)) {
+			resultSet.delete(key)
 		}
-		if (Array.isArray(item) && item.length === 2) {
-			if (item[1]) {
-				return item[0]
+		if (itemFlag === true && !resultSet.has(key)) {
+			resultSet.add(key)
+		}
+	}
+
+	function forEachData(list: ClassNameUnit[]) {
+		list.forEach(item => {
+
+			if (!item) return
+
+			if (Array.isArray(item)) return forEachData(item)
+
+			if (typeof item === 'string' || typeof item === 'number') {
+				resultSet.add(item)
+				return
 			}
-		}
-		return
-	})
 
-	return resultArr.filter(Boolean).join(' ')
+			if (type(item) === 'Object') {
+				for (const key in item as Record<string, any>) {
+					const itemFlag = !!(item as unknown as Record<string, any>)[key]
+					choicesMap[key] = itemFlag
+					checkValid(itemFlag, key)
+				}
+				return
+			}
+		})
+	}
 
+	forEachData(rest)
+
+
+	// for (const key in choicesMap as Record<string, any>) {
+	// 	checkValid(choicesMap[key], key)
+	// }
+
+	return [...resultSet].join(' ')
 }

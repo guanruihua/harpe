@@ -8,3 +8,5 @@ config/
 commitlint*
 jest.config.js
 coverage/
+example/
+background/
