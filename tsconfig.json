@@ -23,7 +23,8 @@
   "include": [
     "./src/**/*",
     "*.d.ts",
-    "./typings/externals.d.ts"
+    "./typings/externals.d.ts",
+    "./background/externals.d.ts"
   ],
   "exclude": [
     "**/*/__test__/*",

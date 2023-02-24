@@ -1,4 +1,4 @@
-import { type } from 'rh-js-methods'
+import { type } from 'check-it-type'
 
 type ClassNameBaseUnit = Record<string, any> | string | undefined | null | number | boolean
 
