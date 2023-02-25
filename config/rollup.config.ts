@@ -4,13 +4,12 @@ import babel from 'rollup-plugin-babel'
 import resolve from 'rollup-plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
 import { eslint } from 'rollup-plugin-eslint'
-import { DEFAULT_EXTENSIONS } from '@babel/core'
 import { terser } from 'rollup-plugin-terser'
-import pkg from './package.json'
+import pkg from '../package.json'
 
 const paths = {
-  input: path.join(__dirname, '/src/index.ts'),
-  output: path.join(__dirname, '/lib')
+  input: path.join(__dirname, '../src/index.ts'),
+  output: path.join(__dirname, '../lib')
 }
 
 // rollup 配置项
@@ -59,7 +58,7 @@ const rollupConfig = {
       tsconfig:'./tsconfig.json',
       include: './src',
       // babel 默认不支持 ts 需要手动添加
-      extensions: [...DEFAULT_EXTENSIONS, '.ts']
+      extensions: ['.ts']
     }),
     terser()
 
