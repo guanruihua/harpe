@@ -55,7 +55,7 @@
     "@typescript-eslint/parser": "^5.40.1",
     "abandonjs": "2.5.5",
     "babel-loader": "^8.1.0",
-    "check-it-type": "^0.4.0",
+    "check-it-type": "^0.4.1",
     "clean-webpack-plugin": "^4.0.0-alpha.0",
     "commitlint": "^17.2.0",
     "copy-webpack-plugin": "^9.0.1",

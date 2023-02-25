@@ -13,7 +13,7 @@ specifiers:
   '@typescript-eslint/parser': ^5.40.1
   abandonjs: 2.5.5
   babel-loader: ^8.1.0
-  check-it-type: ^0.4.0
+  check-it-type: ^0.4.1
   clean-webpack-plugin: ^4.0.0-alpha.0
   commitlint: ^17.2.0
   copy-webpack-plugin: ^9.0.1
@@ -70,7 +70,7 @@ devDependencies:
   '@typescript-eslint/parser': 5.40.1_z4bbprzjrhnsfa24uvmcbu7f5q
   abandonjs: 2.5.5
   babel-loader: 8.3.0_webpack@5.75.0
-  check-it-type: 0.4.0
+  check-it-type: 0.4.1
   clean-webpack-plugin: 4.0.0_webpack@5.75.0
   commitlint: 17.3.0
   copy-webpack-plugin: 9.1.0_webpack@5.75.0
@@ -1532,8 +1532,8 @@ packages:
     resolution: {integrity: sha512-mT8iDcrh03qDGRRmoA2hmBJnxpllMR+0/0qlzjqZES6NdiWDcZkCNAk4rPFZ9Q85r27unkiNNg8ZOiwZXBHwcA==}
     dev: true
 
-  /check-it-type/0.4.0:
-    resolution: {integrity: sha512-TPiz3ZswnLTr04+kz1VMIqfpLGqr4AAjhgV+7YcfO8WiOttR+1vEjUdHA+I7kwhk7M9GQQtO5YeLK+t/z0wSSQ==}
+  /check-it-type/0.4.1:
+    resolution: {integrity: sha512-uRHc6XkU2hw8LMShEsnVu38QjKXNGoAOpRfCk+notekUWRQKHOA4VXFjtCqRJmi14M4hRAqU1jgiJnKPlJTKNg==}
     engines: {node: '>=16'}
     dev: true
 
