@@ -10,7 +10,8 @@
   "scripts": {
     "commitlint": "commitlint -e",
     "reload": "rimraf node_modules && cnpm install",
-    "build": "npx rollup -c --extend ./config/rollup.config.ts",
+    "build": "npx rollup -c ./config/rollup.build.js",
+    "build:old": "npx rollup -c --extend ./config/rollup.build.ts",
     "md": "ts-node ./md.ts",
     "md:dev": "ts-node-dev --respawn --transpile-only ./md.ts",
     "test": "ts-node-dev --respawn --transpile-only ./test/index.ts",
@@ -43,6 +44,7 @@
   "author": "ruihuag",
   "license": "MIT",
   "devDependencies": {
+    "@babel/core": "^7.21.0",
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
     "@rollup/plugin-commonjs": "^21.1.0",
@@ -80,7 +82,7 @@
     "resolve-url-loader": "^4.0.0",
     "rh-ts-methods": "^0.0.2",
     "rimraf": "^3.0.2",
-    "rollup": "^2.79.1",
+    "rollup": "^3.17.3",
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-eslint": "^7.0.0",
     "rollup-plugin-node-resolve": "^5.2.0",

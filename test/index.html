@@ -19,7 +19,9 @@
 	<!-- <script src="https://cdn.jsdelivr.net/npm/rh-color@0.0.4" defer></script> -->
 	<script type="module">
 		import * as uu from "../lib/index.esm.js";
-		console.log({ uu })
+		console.log({ uu }, Object.keys(uu))
+		uu.setCookie('a','b')
+		console.log(uu.getCookie('a'))
 		// import * as __ from 'https://cdn.jsdelivr.net/npm/rh-color@0.0.4'
 		// logGroup('name',123,123)
 		// console.log(123)
