@@ -1,4 +1,5 @@
-/* eslint-disable*/
+import { isEmpty } from "check-it-type";
+
 /**
  * @title parseQueryString 
  * @description 获取url上的值
@@ -31,13 +32,11 @@ export function getQueryString(url: string = window.location.href, name: string)
 // 获取URL hash后面的参数
 export function getHashQueryString(key) {
 	const after = window.location.href.split('?')[1]
-	if (after) {
-		const reg = new RegExp(`(^|&)${key}=([^&]*)(&|$)`)
-		const r = after.match(reg)
-		if (r != null) {
-			return decodeURIComponent(r[2])
-		}
-		return null
+	if (isEmpty(after)) return null
+	const reg = new RegExp(`(^|&)${key}=([^&]*)(&|$)`)
+	const r = after.match(reg)
+	if (r != null) {
+		return decodeURIComponent(r[2])
 	}
 	return null
 }

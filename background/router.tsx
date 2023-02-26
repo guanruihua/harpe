@@ -9,11 +9,13 @@ interface _MenuObject extends Record<string, any> {
 export type MenuObject = RouteObject & _MenuObject
 
 const list = [
+	'dom',
 	'action',
 	'deviceType',
 	'cookie',
 	'scroll',
-	'utils',
+	'location',
+	'storage',
 ].map(name => {
 	return {
 		name,

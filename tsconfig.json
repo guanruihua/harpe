@@ -25,7 +25,7 @@
     "*.d.ts",
     "./typings/externals.d.ts",
     "./background/externals.d.ts"
-  ],
+, "src/dom/__test__/.X.ts"  ],
   "exclude": [
     "**/*/__test__/*",
     "./config/**/*",

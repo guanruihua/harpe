@@ -5,4 +5,3 @@
  * @returns {boolean}
  */
 export const isFocus = (element: HTMLElement) => (element === document.activeElement)
-

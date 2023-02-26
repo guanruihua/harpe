@@ -1,12 +1,7 @@
 import React from "react"
-import classNamesCase from './classNames.case'
 import { parseQueryStringCase } from './url.case'
 
 const list = [
-	{
-		name: 'classNames',
-		result: classNamesCase
-	},
 	{
 		name: 'parseQueryString',
 		result: parseQueryStringCase
