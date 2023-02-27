@@ -1,5 +1,5 @@
 import { isArray, isEmpty, isFunction, isNumber, isObject, isString } from 'check-it-type'
-import type { StorageProps, StorageConfig, StorageValue, StorageCallback, StorageObjectValue, StorageArrayValue, StorageBaseValue } from './type'
+import type { StorageProps, StorageConfig, StorageValue, StorageCallback, StorageObjectValue, StorageArrayValue } from './type'
 
 /**
  * @title StorageClass 

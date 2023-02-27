@@ -18,9 +18,6 @@ function App() {
 	}, [])
 
 	return (<div className="main">
-		{/* <div className="header">
-			
-		</div> */}
 		<aside className="menu">
 			{menu.map((item: MenuObject) => {
 				const { name, path } = item

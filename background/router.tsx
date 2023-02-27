@@ -26,10 +26,12 @@ const list = [
 	}
 })
 
+function Home() { return <div>home</div > }
+
 export const menu: MenuObject[] = [
 	{
 		path: '/',
-		element: (() => <div>home</div >) as any
+		element: <Home />
 	}
 ].concat(list)
 

@@ -3,7 +3,6 @@ export function MyDb() {
 	return "my db";
 }
 
-
 /**
  * 打开数据库
  * @param {object} dbName 数据库的名字
