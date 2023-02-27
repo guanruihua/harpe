@@ -15,6 +15,16 @@ button {
   margin-bottom: 4px;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+  margin-bottom: 12px;
+  margin-top: 4px;
+}
+
 body {
   background-color: #111111;
 }
@@ -72,11 +82,16 @@ button {
     border-radius: 8px;
     padding: 10px;
 
-    button {
+    button,
+    input {
       border-width: 2px;
       padding: 8px 12px;
       margin: 4px 4px 4px 0;
-
+    }
+    input{
+      display: block;
+    }
+    button {
       &:hover {
         color: #9afc8d;
         background-color: #434343;
@@ -85,6 +100,7 @@ button {
 
     * {
       border-radius: 4px;
+      font-weight: bolder;
       color: #c5c5c5;
       border-color: #c5c5c5;
       background-color: transparent;
