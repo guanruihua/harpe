@@ -2,7 +2,7 @@ export * from './connect'
 export * from './delete'
 export * from './select'
 export * from './update'
-export * from './add'
+export * from './create'
 export * from './type'
 
 
