@@ -1,26 +1,30 @@
-import { message } from '../common'
-import { IDBEvent } from '../type'
-import { openDB } from '../connect'
+import { IDBConfig, IDBEvent } from '../type'
+import { openIDB } from '../connect'
+import { isEffectArray, isEmpty, isObject } from 'check-it-type'
+import { ObjectType } from 'abandonjs';
+
 /**
- * 新增数据
+ * @description 新增数据 到 IDB 中
  * @param {object} db 数据库实例
  * @param {string} storeName 仓库名称
  * @param {string} data 数据
  */
-export function addDataToDB(DBName: string, storeName: string, data: any): void {
+export function addDataToDB(IDBConfig: IDBConfig, storeName: string, data: ObjectType | ObjectType[]): void {
+	if (isEmpty(storeName)) return;
 
-	openDB(DBName, (e: IDBDatabase) => {
-		const request = e
-			.transaction([storeName], "readwrite") // 事务对象 指定表格名称和操作模式（"只读"或"读写"）
-			.objectStore(storeName) // 仓库对象
-			.add(data)
-
-		request.onsuccess = function (): void {
-			console.log(message.writeSuccess)
-		};
-
-		request.onerror = function (): void {
-			console.log(message.writeError)
-		};
+	openIDB(IDBConfig, {
+		success: (e: IDBEvent) => {
+			const request = e.target.result
+			if (isObject(data)) {
+				request.transaction([storeName], "readwrite").objectStore(storeName).add(data)
+				return;
+			}
+			if (isEffectArray(data)) {
+				data.forEach(item =>
+					request.transaction([storeName], "readwrite").objectStore(storeName).add(item)
+				)
+				return;
+			}
+		}
 	})
 }
