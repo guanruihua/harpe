@@ -18,18 +18,3 @@ export function deleteDB(db: any, storeName, id) {
 		console.log("数据删除失败");
 	};
 }
-
-/**
-/ /  * 删除数据库
- * @param {object} dbName 数据库名称
- */
-export function deleteDBAll(dbName: string): void {
-	console.log(dbName);
-	const deleteRequest = window.indexedDB.deleteDatabase(dbName)
-	deleteRequest.onerror = function (event: any): void {
-		console.log("删除失败");
-	};
-	deleteRequest.onsuccess = function (event: any): void {
-		console.log("删除成功");
-	};
-}

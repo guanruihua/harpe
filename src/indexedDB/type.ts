@@ -60,17 +60,3 @@ export interface IDBConfig {
 	version?: number
 	stores?: IDBStore | IDBStore[]
 }
-
-// /**
-//  * @default false
-//  * @description 显示配置的回调信息
-//  */
-// log?: boolean
-// message?: {
-// 	error?: string
-// 	success?: string
-// 	blocked?: string
-// 	upgradeNeeded?: string
-// 	addEventListener?: string
-// 	removeEventListener?: string
-// }

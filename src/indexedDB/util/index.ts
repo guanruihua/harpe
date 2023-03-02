@@ -38,6 +38,4 @@ export function IDBMonitor(request: IDBOpenDBRequest, events: IDEMonitorEvents) 
 
 	if (events.addEventListener) request.addEventListener = events.addEventListener
 	if (events.removeEventListener) request.removeEventListener = events.removeEventListener
-
-
 }

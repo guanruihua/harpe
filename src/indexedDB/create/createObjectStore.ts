@@ -13,16 +13,17 @@ export function createObjectStore(IDBConfig: IDBConfig) {
 	if (isEmpty(stores)) return;
 
 	openIDB(IDBConfig, {
-		error: function (e) {
-			console.log('error')
-		},
-		upgradeNeeded: function (this: IDBOpenDBRequest, ev: IDBVersionChangeEvent) {
+		upgradeNeeded: function (this: IDBOpenDBRequest) {
 			const db: IDBDatabase | null = this.result;
-			console.log({ db, stores })
+			// console.log({ db, stores })
 			if (isNull(db)) return;
 			if (isEffectArray(stores))
 				stores.forEach(item => {
 					const { storeName, keyPath: pKeyPath = 'id', autoIncrement = false, params = [] } = item || {}
+					// 当前store已经创建
+					if (db.objectStoreNames.contains(storeName)) {
+						return
+					}
 					const objectStore = db.createObjectStore(storeName, { keyPath: pKeyPath, autoIncrement })
 					if (isEffectArray(params)) {
 						params.forEach(param => {
