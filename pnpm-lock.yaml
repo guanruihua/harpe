@@ -53,6 +53,7 @@ specifiers:
   typescript: ^4.8.4
   typescript-plugin-css-modules: ^3.4.0
   unit-testing-js: ^0.3.3
+  unit-testing-react: ^0.0.3
   webpack: ^5.64.2
   webpack-cli: ^4.3.0
   webpack-dev-server: ^3.11.2
@@ -111,6 +112,7 @@ devDependencies:
   typescript: 4.8.4
   typescript-plugin-css-modules: 3.4.0_mwhvu7sfp6vq5ryuwb6hlbjfka
   unit-testing-js: 0.3.3
+  unit-testing-react: 0.0.3_biqbaboplfbrettd7655fr4n2y
   webpack: 5.75.0_webpack-cli@4.10.0
   webpack-cli: 4.10.0_ixwfotxft53uv5r5hjf7zsiiya
   webpack-dev-server: 3.11.3_pda42hcaj7d62cr262fr632kue
@@ -6788,6 +6790,17 @@ packages:
   /unit-testing-js/0.3.3:
     resolution: {integrity: sha512-d4URaqMwjkVDwYI/bQqkWVk+tvLzH03L8MmSTTd/6iYzHZyIH+qJcx51Gq9xo/zCqw0NL8GbGKaM1nEDpCSLfA==}
     engines: {node: '>=16'}
+    dev: true
+
+  /unit-testing-react/0.0.3_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-VwzWPxS7ZIkjit/Rz9Bvl42bEZwGbwLgDdsonnmnoLN+wnyO0b/Kkk6XOq1v5K6vKv+UODEFab49kPGdeqrl6w==}
+    peerDependencies:
+      react: '>=16.9.0'
+      react-dom: '>=16.9.0'
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+      react-router: 6.5.0_react@18.2.0
     dev: true
 
   /universalify/2.0.0:

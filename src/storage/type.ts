@@ -1,8 +1,8 @@
 type _StorageBaseValue = undefined | null | string | number
 
 export type StorageBaseValue = _StorageBaseValue
-export type StorageObjectValue<T> = Record<string, T | never>
-export type StorageArrayValue<T> = (T | never)[]
+export type StorageObjectValue<T = unknown> = Record<string, T | never>
+export type StorageArrayValue<T = any> = (T | never)[]
 
 export type StorageValue = StorageBaseValue | StorageObjectValue<unknown> | StorageArrayValue<unknown>
 

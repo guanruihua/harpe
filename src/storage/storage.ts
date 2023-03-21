@@ -59,7 +59,7 @@ export class StorageClass implements StorageProps {
 
 	getArray<T>(
 		key: string,
-		defaultValue = isArray(this.defaultValue) ? this.defaultValue : []
+		defaultValue: StorageArrayValue<T> = (isArray(this.defaultValue) ? this.defaultValue : []) as StorageArrayValue<T>
 	): StorageArrayValue<T> {
 		try {
 			const result: StorageArrayValue<T> = JSON.parse(this.get(key) as string || '{}')
@@ -70,7 +70,11 @@ export class StorageClass implements StorageProps {
 	}
 
 	setItem(key: string, value: StorageValue): void {
-		return this.setItem(key, JSON.stringify(value))
+		if (isString(value)) {
+			this.storage.setItem(key, value)
+		} else {
+			this.storage.setItem(key, JSON.stringify(value))
+		}
 	}
 	key(index: number): string | null {
 		return this.storage.key(index)

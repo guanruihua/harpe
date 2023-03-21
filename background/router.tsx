@@ -16,7 +16,6 @@ const list = [
 	'scroll',
 	'location',
 	'storage',
-	'indexedDB',
 ].map(name => {
 	return {
 		name,

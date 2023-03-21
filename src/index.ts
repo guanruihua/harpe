@@ -1,7 +1,6 @@
 export * from './cookie'
 export * from './action'
 export * from './location'
-export * from './indexedDB'
 export * from './dom'
 export * from './deviceType'
 export * from './screen'
