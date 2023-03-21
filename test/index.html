@@ -5,16 +5,27 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/rh-static@0.0.1/css/test-body.css">
+	<title>browser-helper-js</title>
 </head>
 
+<style>
+
+</style>
+
 <body>
-	<script src="../dist/index.js"></script>
-	<script>
-		// import * as uu from '../dist/index.js'
-		// const uu = require('../dist/index.js')
-		// console.log(uu)
-		// console.log(classNames)
+
+	<script src="https://cdn.jsdelivr.net/npm/rh-static@0.0.1/js/addWindowSize.js" defer></script>
+	<!-- <script src="https://cdn.jsdelivr.net/npm/rh-color@0.0.4" defer></script> -->
+	<script type="module">
+		import * as uu from "../lib/index.esm.js";
+		console.log({ uu }, Object.keys(uu), Object.keys(uu).length)
+		uu.setCookie('a','b')
+		console.log(uu.getCookie('a'))
+		// import * as __ from 'https://cdn.jsdelivr.net/npm/rh-color@0.0.4'
+		// logGroup('name',123,123)
+		// console.log(123)
+		// console.log(__)
 	</script>
 </body>
 

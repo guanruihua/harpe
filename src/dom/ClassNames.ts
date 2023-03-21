@@ -1,9 +1,15 @@
-import { type } from 'rh-js-methods'
+import { type } from 'check-it-type'
 
 type ClassNameBaseUnit = Record<string, any> | string | undefined | null | number | boolean
 
 export type ClassNameUnit = ClassNameBaseUnit | ClassNameBaseUnit[]
 
+/**
+ * @title classNames
+ * @description 指定className 合集 来取消或使用某className
+ * @param classNames {ClassNameUnit[]} className合集 
+ * @returns {string}
+ */
 export function classNames(...rest: ClassNameUnit[]): string {
 
 	const resultSet = new Set<string | number>()

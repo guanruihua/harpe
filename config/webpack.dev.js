@@ -6,12 +6,10 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const ProgressBarWebpackPlugin = require('progress-bar-webpack-plugin')
 const { ESBuildPlugin } = require('esbuild-loader')
 
-const isESBuild = process.env.DEV_MODE === 'esbuild'
-
 const plugins = [
 	new CleanWebpackPlugin(),
 	new ProgressBarWebpackPlugin(),
-	isESBuild && new ESBuildPlugin(),
+	new ESBuildPlugin(),
 	new webpack.DefinePlugin({
 		"process.env.PROJECT_ENV": JSON.stringify(process.env.PROJECT_ENV)
 	}),
@@ -32,7 +30,7 @@ const rules = [
 		exclude: /node_modules/,
 		use: [
 			// MiniCssExtractPlugin.loader, 
-			'style-loader',  'css-loader', 
+			'style-loader', 'css-loader',
 			// 'postcss-loader'
 		],
 	},
@@ -79,16 +77,7 @@ const rules = [
 				},
 			}]
 	},
-
 	{
-		test: /\.(jpe?g|png|gif|svg|woff|woff2|eot|ttf|otf|ico)$/i,
-		type: "asset/resource",
-		exclude: /node_modules/
-	},
-]
-
-if (isESBuild) {
-	rules.push({
 		test: /\.[jt]sx?$/,
 		exclude: /node_modules/,
 		loader: 'esbuild-loader',
@@ -98,14 +87,17 @@ if (isESBuild) {
 			jsxFactory: 'React.createElement',
 			jsxFragment: 'React.Fragment',
 		},
-	})
-} else {
-	rules.push({ test: /\.(ts|tsx)$/, loader: 'ts-loader', exclude: /node_modules/ })
-}
+	},
+	{
+		test: /\.(jpe?g|png|gif|svg|woff|woff2|eot|ttf|otf|ico)$/i,
+		type: "asset/resource",
+		exclude: /node_modules/
+	},
+]
 
 module.exports = {
 	entry: {
-		app: path.resolve(__dirname, '../example/index.tsx'),
+		app: path.resolve(__dirname, '../background/index.tsx'),
 	},
 	output: {
 		publicPath: '/',
