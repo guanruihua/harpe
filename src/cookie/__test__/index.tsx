@@ -1,4 +1,4 @@
-import { type } from "check-it-type"
+import { type } from "asura-eye"
 import React, { useEffect, useState } from "react"
 import { getCookie, setCookie } from '..'
 

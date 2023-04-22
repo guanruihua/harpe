@@ -1,5 +1,5 @@
 import { ObjectType, stringify } from "abandonjs"
-import { isEmpty, type, isEffectArray } from "check-it-type"
+import { isEmpty, type, isEffectArray } from "asura-eye"
 
 export * from './clear'
 

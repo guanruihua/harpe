@@ -1,4 +1,4 @@
-import { isEffectObject } from "check-it-type"
+import { isEffectObject } from "asura-eye"
 
 /**
  * @title addCSSVariable

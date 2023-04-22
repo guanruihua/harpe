@@ -1,4 +1,4 @@
-import { isEmpty } from "check-it-type";
+import { isEmpty } from "asura-eye";
 
 /**
  * @title parseQueryString 

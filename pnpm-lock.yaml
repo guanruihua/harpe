@@ -13,6 +13,7 @@ specifiers:
   '@typescript-eslint/eslint-plugin': ^5.40.1
   '@typescript-eslint/parser': ^5.40.1
   abandonjs: 2.5.5
+  asura-eye: ^0.5.1
   babel-loader: ^8.1.0
   check-it-type: ^0.4.1
   clean-webpack-plugin: ^4.0.0-alpha.0
@@ -72,6 +73,7 @@ devDependencies:
   '@typescript-eslint/eslint-plugin': 5.40.1_ukgdydjtebaxmxfqp5v5ulh64y
   '@typescript-eslint/parser': 5.40.1_z4bbprzjrhnsfa24uvmcbu7f5q
   abandonjs: 2.5.5
+  asura-eye: 0.5.1
   babel-loader: 8.3.0_qoaxtqicpzj5p3ubthw53xafqm
   check-it-type: 0.4.1
   clean-webpack-plugin: 4.0.0_webpack@5.75.0
@@ -1440,6 +1442,11 @@ packages:
   /astral-regex/1.0.0:
     resolution: {integrity: sha512-+Ryf6g3BKoRc7jfp7ad8tM4TtMiaWvbF/1/sQcZPkkS7ag3D5nMBCe2UfOTONtAkaG0tO0ij3C5Lwmf1EiyjHg==}
     engines: {node: '>=4'}
+    dev: true
+
+  /asura-eye/0.5.1:
+    resolution: {integrity: sha512-KdZg2smIYQ17iBsvBfYYHxjzwvgUTjkF419iqptKPukTus8y1HZpyJNDGqm1kPv6lNuIw2BIt5cCMDi28jctBw==}
+    engines: {node: '>=16'}
     dev: true
 
   /async-each/1.0.3:

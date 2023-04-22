@@ -1,7 +1,7 @@
 {
   "name": "harpe",
-  "version": "0.1.0",
-  "description": "方法包",
+  "version": "0.1.1",
+  "description": "Common methods for browsers",
   "module": "lib/index.esm.js",
   "main": "lib/index.js",
   "unpkg": "/lib/",
@@ -53,6 +53,7 @@
     "@typescript-eslint/eslint-plugin": "^5.40.1",
     "@typescript-eslint/parser": "^5.40.1",
     "abandonjs": "2.5.5",
+    "asura-eye": "^0.5.1",
     "babel-loader": "^8.1.0",
     "check-it-type": "^0.4.1",
     "clean-webpack-plugin": "^4.0.0-alpha.0",
