@@ -4,6 +4,8 @@ type ClassNameBaseUnit = Record<string, any> | string | undefined | null | numbe
 
 export type ClassNameUnit = ClassNameBaseUnit | ClassNameBaseUnit[]
 
+export type ClassNameType = ClassNameUnit
+
 /**
  * @title classNames
  * @description 指定className 合集 来取消或使用某className
