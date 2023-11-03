@@ -16,13 +16,16 @@ const list = [
 	'scroll',
 	'location',
 	'storage',
+	'file',
 ].map(name => {
 	return {
 		name,
 		path: '/' + name,
-		element: <Suspense fallback={<div>Loading</div>}>
-			{React.createElement(lazy(() => import(`../src/${name}/__test__`)))}
-		</Suspense>
+		element: (
+			<Suspense fallback={<div>Loading</div>}>
+				{React.createElement(lazy(() => import(`../src/${name}/__test__`)))}
+			</Suspense>
+		)
 	}
 })
 

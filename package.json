@@ -40,6 +40,9 @@
   },
   "author": "ruihuag",
   "license": "MIT",
+  "dependencies": {
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.0/xlsx-0.20.0.tgz"
+  },
   "devDependencies": {
     "@babel/core": "^7.21.0",
     "@commitlint/cli": "^17.1.2",
