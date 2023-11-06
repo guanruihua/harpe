@@ -1,68 +1,20 @@
-import { utils, writeFileXLSX, read } from 'xlsx'
-/**
- 数据格式, xlsx data
- {
-    SheetNames: ['Sheet1'],
-    Sheets: {
-      Sheet1: {
-        '!ref': 'A1:B6',
-        A1: {
-          t: 's',
-          v: 'Name',
-          w: 'Name',
-        },
-      ...
-        B6: {
-          t: 'n',
-          v: 46,
-        },
-      },
-    },
-  }
- */
-/**
- * @description 导出 xlsx 文件
- * @param.value {xlsx data}
- * @param.name { xlsx 文件名称}
- * @param {*} props
- * @eg: 	exportXlsxFile({ value: value, name: 'my.csv' })
- */
-export function exportXlsxFile(props) {
-  const { value, name = 'temp.xlsx', sheetName = 'Data', config, cols } = props
-  const ws = utils.json_to_sheet(value, config)
-  if (cols) {
-    ws['!cols'] = cols
-  }
-  const wb = utils.book_new()
-  utils.book_append_sheet(wb, ws, sheetName)
-  writeFileXLSX(wb, name)
-}
+import { utils, read } from 'xlsx'
 
 /**
  * @description 读取 xlsx 文件
- * @use 结合 el-upload 使用
  * @param {*} file
  * @returns
  * @eg:
- const handleChange = async (file) => {
   const data = await readXlsxFile(file)
-  console.log(data)
- }
  */
-export function readXlsxFile(file) {
+export function readXlsxFile(file: File) {
   const reader = new FileReader()
   return new Promise((resolve, reject) => {
     try {
-      // const { raw, ...rest } = file
-      // reader.readAsBinaryString(raw)
       reader.readAsBinaryString(file)
       reader.onload = (e: any) => {
         const binaryData = e.target.result
-        console.log({ binaryData })
         const data = read(binaryData, { type: 'binary', cellDates: true })
-        // const data = read(binaryData, { type: 'buffer', cellDates: true })
-        // const data = read(binaryData, { type: 'binary', cellDates: true, cellText: false })
-        // resolve({ ...rest, data })
         resolve(data)
       }
     } catch (error) {
@@ -71,19 +23,6 @@ export function readXlsxFile(file) {
   })
 }
 
-/**
- * @description xlsx 数据转换为 json
- * @param {*} data {xlsx data}
- * @param {*} index {获取sheetNames 对应的数据 index}
- * @returns {Array}
- */
-export function sheetToJSON(data, index = 0) {
-  try {
-    return utils.sheet_to_json(data.Sheets[data.SheetNames[index]])
-  } catch (error) {
-    return []
-  }
-}
 
 function to26(number) {
   let result = ''

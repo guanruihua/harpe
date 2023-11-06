@@ -52,7 +52,7 @@ devDependencies:
   babel-loader:
     specifier: ^8.1.0
     version: 8.3.0(@babel/core@7.21.0)(webpack@5.75.0)
-  check-it-type:
+  asura-eye:
     specifier: ^0.4.1
     version: 0.4.1
   clean-webpack-plugin:
@@ -1778,7 +1778,7 @@ packages:
     resolution: {integrity: sha512-mT8iDcrh03qDGRRmoA2hmBJnxpllMR+0/0qlzjqZES6NdiWDcZkCNAk4rPFZ9Q85r27unkiNNg8ZOiwZXBHwcA==}
     dev: true
 
-  /check-it-type@0.4.1:
+  /asura-eye@0.4.1:
     resolution: {integrity: sha512-uRHc6XkU2hw8LMShEsnVu38QjKXNGoAOpRfCk+notekUWRQKHOA4VXFjtCqRJmi14M4hRAqU1jgiJnKPlJTKNg==}
     engines: {node: '>=16'}
     dev: true
