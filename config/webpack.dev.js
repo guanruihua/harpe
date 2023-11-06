@@ -125,7 +125,7 @@ module.exports = {
 	mode: 'development',
 	devServer: {
 		port: 6457,
-		// host: '0.',
+		host: '0.0.0.0',
 		watchContentBase: true,
 		inline: true,
 		stats: 'errors-only',

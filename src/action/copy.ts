@@ -1,7 +1,7 @@
 /**
  * @title copyText
  * @description 复制文本
- * @param text {string}
+ * @param {string} text
  * @returns {boolean}
  */
 export function copyText(text: string) {

@@ -5,8 +5,9 @@ import { EmptyObserver } from "./constant";
  * @title  MutationHandler
  * @link https://developer.mozilla.org/zh-CN/docs/Web/API/MutationObserver/observe
  * @description  观察Dom 的改变
- * @param targetNode {HTMLElement} 观察的Dom
- * @param options {MutationObserverInit} 观察器的配置（需要观察什么变动）
+ * @param {HTMLElement} target 观察的Dom
+ * @param {MutationCallback | Record<keyof MutationObserverInit, MutationCallback>} callback
+ * @param {MutationObserverInit} options 观察器的配置（需要观察什么变动）
  * @returns {MutationObserver}
  * 
  * options {MutationObserverInit}  观察器的配置
@@ -31,7 +32,7 @@ export function MutationHandler(
 	options: MutationObserverInit = { attributes: true }
 ) {
 	if (target === null) return EmptyObserver
-	
+
 	// 当观察到变动时执行的回调函数
 	const cb = function (mutationsList: MutationRecord[], observer: MutationObserver) {
 		if (isFunction(callback)) {

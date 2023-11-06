@@ -1,4 +1,3 @@
-import { type } from "asura-eye"
 import React, { useEffect, useState } from "react"
 import { getCookie, setCookie } from '..'
 

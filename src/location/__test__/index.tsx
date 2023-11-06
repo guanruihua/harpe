@@ -1,11 +1,10 @@
 import React from "react"
-import { parseQueryStringCase } from './url.case'
 
 const list = [
-	{
-		name: 'parseQueryString',
-		result: parseQueryStringCase
-	}
+	// {
+	// 	name: 'parseQueryString',
+	// 	result: parseQueryStringCase
+	// }
 ]
 
 export default function () {

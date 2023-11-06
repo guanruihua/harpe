@@ -1,7 +1,7 @@
 /**
  * @title isDarkMode
  * @description 是黑暗模式
- * @return {boolean]}
+ * @return {boolean}
  */
 export const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
 

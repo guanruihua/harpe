@@ -1,6 +1,6 @@
 {
   "name": "harpe",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Common methods for browsers",
   "module": "lib/index.esm.js",
   "main": "lib/index.js",

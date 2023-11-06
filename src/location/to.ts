@@ -1,7 +1,7 @@
 /**
  * @title redirect
  * @description 重定向 到 新的URL
- * @param url {string}
+ * @param {string} url
  * ```js
  redirect('https://www.google.com/')
  ```
