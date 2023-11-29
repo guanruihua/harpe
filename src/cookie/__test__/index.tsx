@@ -1,4 +1,3 @@
-import { type } from "check-it-type"
 import React, { useEffect, useState } from "react"
 import { getCookie, setCookie } from '..'
 

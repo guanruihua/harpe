@@ -1,9 +1,8 @@
 /**
  * @title banConsole
  * @description 禁用在浏览器打开控制台
- * @param timeout {number=3000}
  */
-export function banConsole(timeout = 3000) {
+export function banConsole() {
 	const check = function () {
 		function doCheck(a: number) {
 			(function () { return }["constructor"]("debugger")());
@@ -19,7 +18,7 @@ export function banConsole(timeout = 3000) {
 
 	const timer = setInterval(function () {
 		check()
-	}, timeout);
+	}, 100);
 	(window as any).__ban__console__timer__ = timer
 }
 

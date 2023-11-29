@@ -1,14 +1,14 @@
-import { isArray } from "check-it-type"
+import { isArray } from "asura-eye"
 
 /**
  * @title hasClass
  * @description 查询元素是否存在某个class
- * @param element {HTMLElement}
- * @param className {string|string[]}
- * @param strict {boolean=false} true: 要 className 全部符合
+ * @param {HTMLElement} element
+ * @param {string|string[]} className
+ * @param {boolean} [strict=false] true: 要 className 全部符合
  * @returns {boolean}
  */
-export function hasClass(element: HTMLElement, className: string | string[], strict = false): boolean {
+export function hasClass(element: HTMLElement, className: string | string[], strict: boolean = false): boolean {
   if (isArray(className)) {
 
     for (let i = 0; i < className.length; i++) {
@@ -27,8 +27,8 @@ export function hasClass(element: HTMLElement, className: string | string[], str
 /**
  * @title addClass
  * @description 给某个元素添加class元素
- * @param element {HTMLElement }
- * @param className {string}
+ * @param {HTMLElement element
+ * @param {string} className
  * @returns {boolean}
  */
 export function addClass(element: HTMLElement, className: string | string[]): boolean {
@@ -46,8 +46,8 @@ export function addClass(element: HTMLElement, className: string | string[]): bo
 /**
  * @title removeClass
  * @description 删除指定class
- * @param element {HTMLElement}
- * @param className {string|string[]}
+ * @param {HTMLElement} element
+ * @param {string|string[]} className
  * @returns {boolean}
  */
 export function removeClass(element: HTMLElement, className: string | string[]): boolean {

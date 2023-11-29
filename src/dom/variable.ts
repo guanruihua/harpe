@@ -1,11 +1,11 @@
-import { isEffectObject } from "check-it-type"
+import { isEffectObject } from "asura-eye"
 
 /**
  * @title addCSSVariable
  * @description 给dom节点添加 变量
- * @param dom {HTMLElement]}
- * @param key {string}
- * @param value {string}
+ * @param {HTMLElement} dom
+ * @param {string} key
+ * @param {string} value
  * @returns {boolean}
  */
 export function addCSSVariable(dom: HTMLElement, key: string, value: string): boolean {
@@ -20,8 +20,8 @@ export function addCSSVariable(dom: HTMLElement, key: string, value: string): bo
 /**
  * @title addCSSVariable
  * @description 给dom节点添加 变量
- * @param dom {HTMLElement]}
- * @param record {[key:string]:string}
+ * @param {HTMLElement} dom
+ * @param {ObjectType<string>} record
  * @returns {boolean}
  */
 export function addCSSVariables(dom: HTMLElement, record: Record<string, string>): boolean {

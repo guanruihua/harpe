@@ -6,7 +6,9 @@ module.exports = {
       'always',
       [
         'step', // 草案中
+        'publish', // 发布新版本
         'bug', // 此项特别针对bug号，用于向测试反馈bug列表的bug修改情况
+        'dev', // 新功能开发中
         'feat', // 新功能（feature）
         'fix', // 修补bug
         'docs', // 文档（documentation）

@@ -1,6 +1,6 @@
 export * from './copy'
 export * from './banConsole'
-export * from './getParams'
+export * from './url'
 export * from './download'
 export * from './getSelected'
 export * from './requestAnimationFrame'

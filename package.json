@@ -1,7 +1,7 @@
 {
   "name": "harpe",
-  "version": "0.1.0",
-  "description": "方法包",
+  "version": "0.2.1",
+  "description": "Common methods for browsers",
   "module": "lib/index.esm.js",
   "main": "lib/index.js",
   "unpkg": "/lib/",
@@ -33,13 +33,16 @@
   "engines": {
     "node": ">=16"
   },
-  "bugs": "https://github.com/kuugajs/rh-browser/issues",
+  "bugs": "https://github.com/guanruihua/harpe/issues",
   "repository": {
     "type": "git",
-    "url": "git@github.com:kuugajs/rh-browser.git"
+    "url": "git@github.com:guanruihua/harpe.git"
   },
   "author": "ruihuag",
   "license": "MIT",
+  "dependencies": {
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.0/xlsx-0.20.0.tgz"
+  },
   "devDependencies": {
     "@babel/core": "^7.21.0",
     "@commitlint/cli": "^17.1.2",
@@ -53,8 +56,8 @@
     "@typescript-eslint/eslint-plugin": "^5.40.1",
     "@typescript-eslint/parser": "^5.40.1",
     "abandonjs": "2.5.5",
+    "asura-eye": "^0.5.1",
     "babel-loader": "^8.1.0",
-    "check-it-type": "^0.4.1",
     "clean-webpack-plugin": "^4.0.0-alpha.0",
     "commitlint": "^17.2.0",
     "copy-webpack-plugin": "^9.0.1",

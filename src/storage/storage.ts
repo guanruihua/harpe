@@ -1,4 +1,4 @@
-import { isArray, isEmpty, isFunction, isNumber, isObject, isString } from 'check-it-type'
+import { isArray, isEmpty, isFunction, isNumber, isObject, isString } from 'asura-eye'
 import type { StorageProps, StorageConfig, StorageValue, StorageCallback, StorageObjectValue, StorageArrayValue } from './type'
 
 /**
