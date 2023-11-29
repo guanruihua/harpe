@@ -33,10 +33,10 @@
   "engines": {
     "node": ">=16"
   },
-  "bugs": "https://github.com/kuugajs/rh-browser/issues",
+  "bugs": "https://github.com/guanruihua/harpe/issues",
   "repository": {
     "type": "git",
-    "url": "git@github.com:kuugajs/rh-browser.git"
+    "url": "git@github.com:guanruihua/harpe.git"
   },
   "author": "ruihuag",
   "license": "MIT",
