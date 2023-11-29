@@ -7,7 +7,7 @@ const { eslint } = require('rollup-plugin-eslint')
 const { terser } = require('rollup-plugin-terser')
 
 const pkg = {
-  name: 'browser-helper-js'
+  name: 'harpe'
 }
 
 const paths = {
@@ -35,6 +35,7 @@ const rollupConfig = {
       sourcemap: true,
     }
   ],
+  external: ['xlsx'],
   plugins: [
     // 验证导入的文件
     eslint({
