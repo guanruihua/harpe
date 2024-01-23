@@ -30,7 +30,7 @@ async function encrypt(key: CryptoKey, data: string): Promise<string> {
   const encryptedArray = new Uint8Array(encryptedData)
   const encryptedText = uint8ArrayToBase64(encryptedArray)
   const ivText = uint8ArrayToBase64(iv)
-  return ivText + '  :  ' + encryptedText
+  return ivText + ':' + encryptedText
 }
 
 // 解密
