@@ -17,6 +17,7 @@ const list = [
 	'location',
 	'storage',
 	'file',
+	'encrypt',
 ].map(name => {
 	return {
 		name,

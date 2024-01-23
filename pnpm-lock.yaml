@@ -47,14 +47,11 @@ devDependencies:
     specifier: 2.5.5
     version: 2.5.5
   asura-eye:
-    specifier: ^0.5.1
-    version: 0.5.1
+    specifier: ^0.8.0
+    version: 0.8.0
   babel-loader:
     specifier: ^8.1.0
     version: 8.3.0(@babel/core@7.21.0)(webpack@5.75.0)
-  asura-eye:
-    specifier: ^0.4.1
-    version: 0.4.1
   clean-webpack-plugin:
     specifier: ^4.0.0-alpha.0
     version: 4.0.0(webpack@5.75.0)
@@ -1509,8 +1506,8 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
-  /asura-eye@0.5.1:
-    resolution: {integrity: sha512-KdZg2smIYQ17iBsvBfYYHxjzwvgUTjkF419iqptKPukTus8y1HZpyJNDGqm1kPv6lNuIw2BIt5cCMDi28jctBw==}
+  /asura-eye@0.8.0:
+    resolution: {integrity: sha512-Gs2nttweNUlcIeq9HROy7yDhNGw+iGmeFz1hWe8jIKoftI3Howp6xMnoilnVMfoI62UWw51it2WFeFE0irslBg==}
     engines: {node: '>=16'}
     dev: true
 
@@ -1776,11 +1773,6 @@ packages:
 
   /chardet@0.7.0:
     resolution: {integrity: sha512-mT8iDcrh03qDGRRmoA2hmBJnxpllMR+0/0qlzjqZES6NdiWDcZkCNAk4rPFZ9Q85r27unkiNNg8ZOiwZXBHwcA==}
-    dev: true
-
-  /asura-eye@0.4.1:
-    resolution: {integrity: sha512-uRHc6XkU2hw8LMShEsnVu38QjKXNGoAOpRfCk+notekUWRQKHOA4VXFjtCqRJmi14M4hRAqU1jgiJnKPlJTKNg==}
-    engines: {node: '>=16'}
     dev: true
 
   /chokidar@2.1.8(supports-color@6.1.0):
