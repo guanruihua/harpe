@@ -1,6 +1,5 @@
 export * from './base64'
 export * from './uuid'
-export * from './encrypt'
 export { default as AES_CBC } from './aes_cbc'
 export { default as AES_CTR } from './aes_ctr'
 export { default as AES_GCM } from './aes_gcm'
