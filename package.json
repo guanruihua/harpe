@@ -56,7 +56,7 @@
     "@typescript-eslint/eslint-plugin": "^5.40.1",
     "@typescript-eslint/parser": "^5.40.1",
     "abandonjs": "2.5.5",
-    "asura-eye": "^0.5.1",
+    "asura-eye": "^0.8.0",
     "babel-loader": "^8.1.0",
     "clean-webpack-plugin": "^4.0.0-alpha.0",
     "commitlint": "^17.2.0",
