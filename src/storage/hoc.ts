@@ -1,5 +1,4 @@
-import { isObject } from 'abandonjs'
-import { type } from 'asura-eye'
+import { type, isObject } from 'asura-eye'
 
 export function storageHoc<T = string>(storage: Storage = localStorage) {
   const getItem = (key: string): T => {
