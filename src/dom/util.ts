@@ -11,7 +11,13 @@ export function getScrollTop() {
   )
 }
 
-
+export const scrollIntoView = (querySelectorName: string) => {
+  const dom = document.querySelector(querySelectorName)
+  dom?.scrollIntoView({
+    behavior: 'smooth',
+    block: 'start',
+  })
+}
 
 // 动态加载第三方js
 // export function asyncLoadScript(url): Promise<void> {

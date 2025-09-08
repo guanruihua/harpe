@@ -5,32 +5,47 @@
  * @returns {boolean}
  */
 export function copyText(text: string) {
-	// clipboardData 在页面上将需要的东西复制到剪贴板上
-	const clipboardData = (window as any).clipboardData
-	if (navigator.clipboard) {
-		navigator.clipboard.writeText(text)
-		return true
-	} else if (clipboardData) {
-		clipboardData.clearData()
-		clipboardData.setData('Text', text)
-		return true
-		// 注意 document.execCommand 已弃用 但是有些浏览器依旧支持 用的时候记得看兼容情况
-	} else if (document.execCommand) {
-		// 通过创建 dom 元素，去把要复制的内容拿到 
-		const el = document.createElement('textarea')
-		el.value = text
-		el.setAttribute('readonly', '')
-		el.style.position = 'absolute'
-		el.style.left = '-9999px'
-		document.body.appendChild(el)
-		el.select()
-		// 拷贝当前内容到剪贴板
-		document.execCommand('copy')
-		// 删除 el 节点
-		document.body.removeChild(el)
-		return true
-	}
-	return false
+  // try {
+  //   if (navigator?.clipboard) {
+  //     navigator.clipboard.writeText(text)
+  //     return true
+  //   }
+  // } catch {
+  //   // eslint-disable-line
+  // }
+  try {
+    // clipboardData 在页面上将需要的东西复制到剪贴板上
+    const clipboardData = (window as any).clipboardData
+    if (clipboardData) {
+      clipboardData.clearData()
+      clipboardData.setData('Text', text)
+      return true
+      // 注意 document.execCommand 已弃用 但是有些浏览器依旧支持 用的时候记得看兼容情况
+    }
+  } catch (error) {
+    // eslint-disable-line
+  }
+
+  try {
+    if (document.execCommand) {
+      // 通过创建 dom 元素，去把要复制的内容拿到
+      const el = document.createElement('textarea')
+      el.value = text
+      el.setAttribute('readonly', '')
+      el.style.position = 'absolute'
+      el.style.left = '-9999px'
+      document.body.appendChild(el)
+      el.select()
+      // 拷贝当前内容到剪贴板
+      document.execCommand('copy')
+      // 删除 el 节点
+      document.body.removeChild(el)
+      return true
+    }
+  } catch (error) {
+    // eslint-disable-line
+  }
+  return false
 }
 
 /**
@@ -38,11 +53,12 @@ export function copyText(text: string) {
  * @description 禁止右键、选择、复制
  */
 export function banCopy() {
-	['contextmenu', 'selectstart', 'copy'].forEach(function (ev) {
-		document.addEventListener(ev, function (event) {
-			return (event.returnValue = false)
-		})
-	})
+  // eslint-disable-next-line
+  ;['contextmenu', 'selectstart', 'copy'].forEach(function (ev) {
+    document.addEventListener(ev, function (event) {
+      return (event.returnValue = false)
+    })
+  })
 }
 
 /**
@@ -50,9 +66,10 @@ export function banCopy() {
  * @description 启用右键、选择、复制
  */
 export function notBanCopy() {
-	['contextmenu', 'selectstart', 'copy'].forEach(function (ev) {
-		document.addEventListener(ev, function (event) {
-			return (event.returnValue = true)
-		})
-	})
+  // eslint-disable-next-line
+  ;['contextmenu', 'selectstart', 'copy'].forEach(function (ev) {
+    document.addEventListener(ev, function (event) {
+      return (event.returnValue = true)
+    })
+  })
 }
